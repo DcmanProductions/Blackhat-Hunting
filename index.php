@@ -16,8 +16,8 @@
         <div id="cta" class="row">
             <a href="https://maineadventures.org/booking?ref=blackhat" target="_blank" class="btn" title="Book your trip on Maine Adventures">book a trip</a>
             <a href="/packages" class="btn secondary" title="Goto the packages page">view our packages</a>
-
         </div>
+        <img id="scroll-indicator" src="/assets/images/scroll-indicator.svg" alt="" title="scroll to content">
     </div>
 
     <section id="what-do-we-do" class="row">
@@ -120,15 +120,7 @@
         </div>
     </section>
 
-    <footer class="col center horizontal vertical">
-        <img src="/assets/images/logo.svg" alt="">
-        <div class="row">
-            <a href="/" class="nav-item <?php echo $page == 0 ? "selected" : ""; ?>" title="Goto the home page">Home</a>
-            <a href="/about" class="nav-item <?php echo $page == 1 ? "selected" : ""; ?>" title="Goto the about page">About</a>
-            <a href="/packages" class="nav-item <?php echo $page == 2 ? "selected" : ""; ?>" title="Goto the packages page">Packages</a>
-            <a href="/gallery" class="nav-item <?php echo $page == 3 ? "selected" : ""; ?>" title="Goto the gallery page">Gallery</a>
-        </div>
-    </footer>
+    <?php include_once $_SERVER["DOCUMENT_ROOT"] . "/assets/php/footer.php"; ?>
 
 </body>
 
