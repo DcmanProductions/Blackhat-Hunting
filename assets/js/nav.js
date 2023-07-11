@@ -1,4 +1,5 @@
-(() => {
+
+$(document).ready(() => {
     const nav = $("nav");
     const expand = () => nav.addClass('expanded')
     const collapse = () => nav.removeClass('expanded')
@@ -9,5 +10,9 @@
             expand()
         }
     }
-    $(document).on('scroll', e => update())
-})()
+    update()
+    $(document).on('scroll', () => update())
+    $("#scroll-indicator").on('click', () => {
+        window.scrollTo(0, window.screen.height - 200)
+    })
+})
