@@ -1,0 +1,106 @@
+:root {
+    --background: hsla(0, 0%, 6%, 1);
+    --primary: hsla(0, 91%, 56%, 1);
+}
+
+body {
+    background: var(--background);
+    font-family: "CircularStd";
+    margin: 0;
+    color: white;
+}
+
+h1, h2, h3, h4 {
+    text-transform: uppercase;
+    font-family: "NeueHaasDisplay";
+    position: relative;
+}
+
+h1 {
+    font-size: 4.5rem;
+}
+
+h1::before {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 200px;
+    bottom: -1rem;
+    background-color: var(--primary);
+    border-radius: 100px;
+}
+
+h2, h3, h4 {
+    margin-bottom: 0;
+}
+
+.col, .row, .center, .grid {
+    display: flex;
+}
+
+.col {
+    flex-direction: column;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.center.horizontal {
+    justify-content: center;
+}
+
+.center.vertical {
+    align-items: center;
+}
+
+.grid {
+    flex-wrap: wrap;
+}
+
+section {
+    padding: 4rem 1rem;
+    max-width: calc(100% - 2rem);
+}
+
+footer {
+    position: relative;
+    background-image: url("/assets/images/footer.webp");
+    height: 561.92px;
+}
+
+footer img {
+    width: 748.606px;
+    height: 264.345px;
+    margin-bottom: 2rem;
+}
+
+footer .nav-item {
+    position: relative;
+    margin: 1rem;
+    opacity: .75;
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+footer .nav-item::before {
+    content: '';
+    position: absolute;
+    background-color: var(--primary);
+    border-radius: 20px;
+    height: 3px;
+    width: 100%;
+    max-width: 0;
+    bottom: -5px;
+    transition: max-width 200ms;
+}
+
+
+footer .nav-item:hover::before, footer .nav-item.selected::before {
+    max-width: 50%;
+}
+
+
+footer .nav-item:hover, footer .nav-item.selected {
+    opacity: 1;
+}
