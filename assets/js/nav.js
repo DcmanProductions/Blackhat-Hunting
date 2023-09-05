@@ -1,4 +1,3 @@
-
 $(document).ready(() => {
     const nav = $("nav");
     const expand = () => nav.addClass('expanded')
@@ -14,5 +13,8 @@ $(document).ready(() => {
     $(document).on('scroll', () => update())
     $("#scroll-indicator").on('click', () => {
         window.scrollTo(0, window.screen.height - 200)
+    })
+    $("#mobile-hamburger").on('click', () => {
+        nav.toggleClass('active')
     })
 })

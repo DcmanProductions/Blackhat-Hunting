@@ -3,6 +3,10 @@
     --primary: hsla(0, 91%, 56%, 1);
 }
 
+::selection {
+    background: var(--primary);
+    color: white;
+}
 body {
     background: var(--background);
     font-family: "CircularStd";
@@ -63,6 +67,22 @@ section {
     max-width: calc(100% - 2rem);
 }
 
+section .col, section .row {
+    margin: 1rem;
+}
+
+section:nth-child(odd) {
+    background: #0C0C0C;
+}
+
+section:nth-child(odd) img {
+    margin-left: 4rem;
+}
+
+section:nth-child(even) img {
+    margin-right: 4rem;
+}
+
 footer {
     position: relative;
     background-image: url("/assets/images/footer.webp");
@@ -103,4 +123,490 @@ footer .nav-item:hover::before, footer .nav-item.selected::before {
 
 footer .nav-item:hover, footer .nav-item.selected {
     opacity: 1;
+}
+
+section img {
+    object-fit: cover;
+    object-position: center;
+    height: auto;
+    width: 50vw;
+    min-width: 600px;
+    max-width: 826px;
+    box-shadow: 23px 20px 0px 0px #FFF;
+}
+
+ul {
+    margin: 0;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+}
+
+
+#landing {
+    position: relative;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.76) 0%, rgba(0, 0, 0, 0.00) 100%), url("/assets/images/background.webp"), lightgray 50% / cover no-repeat;
+    width: 100%;
+    height:100dvh;
+    overflow: hidden;
+    min-height: 820px;
+    margin: 0;
+}
+
+#landing.short {
+    max-height: 200px;
+    min-height: unset;
+
+}
+
+#landing #cta {
+    margin-top: 2rem;
+    
+    max-width: 100%;
+    max-width: -moz-available;
+    max-width: -webkit-fill-available;
+    max-width: fill-available;
+}
+
+#landing #cta .btn {
+    width: 200px;
+    
+    max-width: 100%;
+    max-width: -moz-available;
+    max-width: -webkit-fill-available;
+    max-width: fill-available;
+}
+
+.logo {
+    max-width: 100%;
+    max-width: -moz-available;
+    max-width: -webkit-fill-available;
+    max-width: fill-available;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+section .content {
+    height: 100%;
+}
+
+section .btn {
+    max-width: 250px;
+    max-width: 100%;
+    max-width: -moz-available;
+    max-width: -webkit-fill-available;
+    max-width: fill-available;
+}
+
+#lodging {
+    margin: 0;
+}
+
+#what-do-we-do p {
+    font-size: 1rem;
+}
+
+#map {
+    box-shadow: 23px 20px 0px 0px #F52828;
+    width: 100%;
+    /* height: 400px; */
+    margin-right: 2rem;
+}
+
+#contact-items {
+    width: 100%;
+}
+
+.contact-item {
+    position: relative;
+    width: auto;
+    padding: 1rem 0;
+    padding-left: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.contact-item::before {
+    position: absolute;
+    content: '';
+    background-color: var(--primary);
+    height: 100%;
+    width: 100%;
+    max-width: 20px;
+    left: -1rem;
+    z-index: -1;
+    transition: max-width 200ms;
+}
+
+.contact-item:hover::before {
+    max-width: 100%;
+}
+
+.contact-item i {
+    font-size: 3rem;
+}
+
+.contact-item p.title {
+    font-size: 3rem;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.contact-item p.value {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.contact-item .col {
+    margin-left: 1rem;
+}
+
+#scroll-indicator {
+    position: absolute;
+    bottom: 1rem;
+    height: 144px;
+    cursor: pointer;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 2rem 0;
+    background: transparent;
+    max-height: 100px;
+    transition: max-height, background;
+    transition-duration: 200ms;
+    z-index: 9999;
+}
+nav #mobile-hamburger{
+    display: none;
+    position: absolute;
+    right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+nav.expanded {
+    background: black;
+    max-height: 30px;
+}
+
+nav #brand {
+    font-size: 4.375rem;
+    margin-left: 3.4375rem;
+}
+
+nav #nav-items {
+    margin-left: 270px;
+    transition: margin-left 200ms;
+}
+
+nav.expanded #nav-items {
+    margin-left: 2rem;
+}
+
+nav #nav-items .nav-item {
+    position: relative;
+    margin: 1rem;
+    opacity: .75;
+    font-size: 1rem;
+    font-weight: 900;
+    transition: opacity 200ms;
+}
+
+nav #nav-items .nav-item::before {
+    content: '';
+    position: absolute;
+    background-color: var(--primary);
+    border-radius: 20px;
+    height: 1.581px;
+    width: 100%;
+    max-width: 0;
+    bottom: -5px;
+    transition: max-width 200ms;
+}
+
+nav #nav-items .nav-item:hover, nav #nav-items .nav-item.selected {
+    opacity: 1;
+}
+
+nav #nav-items .nav-item:hover::before, nav #nav-items .nav-item.selected::before {
+    max-width: 50%;
+}
+
+nav #social-buttons {
+    position: absolute;
+    right: 1rem;
+}
+
+nav #social-buttons .btn {
+    padding: 1rem 2rem;
+}
+
+button, .btn, button.secondary:hover, .btn.secondary:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    outline-color: transparent;
+    background-color: var(--primary);
+    color: white;
+    padding: 2rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin: 1rem;
+
+    transition: background, outline, color;
+    transition-duration: 200ms;
+}
+
+button.secondary, .btn.secondary {
+    background: transparent;
+    outline: 2px solid var(--primary);
+}
+
+button:hover, .btn:hover {
+    background: white;
+    color: var(--background);
+}
+
+
+a {
+    position: relative;
+    color: white;
+    font-weight: 900;
+    text-decoration: none;
+    transition: color;
+    transition-duration: 200ms;
+}
+
+a:not(.btn):not(.nav-item):not(#brand):not(.contact-item)::before {
+    --height: 3px;
+    content: '';
+    position: absolute;
+    bottom: calc(var(--height) * -1);
+    height: var(--height);
+    border-radius: 100px;
+    background-color: var(--primary);
+    max-width: 1rem;
+    width: 100%;
+    transition: max-width;
+    transition-duration: 200ms;
+}
+
+a:not(.btn):not(.nav-item):not(#brand):not(.contact-item):hover {
+    color: var(--primary);
+}
+
+a:hover::before {
+    max-width: 100% !important;
+}
+
+:root {
+    --scrollbar-width: 10px;
+    scroll-behavior: smooth;
+    scrollbar-width: var(--scrollbar-width);
+    scrollbar-color: var(--primary) transparent;
+}
+
+body {
+    overflow: overlay;
+}
+
+
+::-webkit-scrollbar {
+    width: var(--scrollbar-width);
+}
+
+::-webkit-scrollbar-thumb {
+    width: var(--scrollbar-width);
+    background: var(--primary);
+    border-radius: 100px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+@font-face {
+    font-family: 'NeueHaasDisplay';
+    src: url('/assets/fonts/NeueHaas/NeueHaasDisplayXXThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'NeueHaasDisplay';
+    src: url('/assets/fonts/NeueHaas/NeueHaasDisplayXThinItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'NeueHaasDisplay';
+    src: url('/assets/fonts/NeueHaas/NeueHaasDisplayThinItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'NeueHaasDisplay';
+    src: url('/assets/fonts/NeueHaas/NeueHaasDisplayRomanItalic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'NeueHaasDisplay';
+    src: url('/assets/fonts/NeueHaas/NeueHaasDisplayMediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'NeueHaasDisplay';
+    src: url('/assets/fonts/NeueHaas/NeueHaasDisplayLightItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'NeueHaasDisplay';
+    src: url('/assets/fonts/NeueHaas/NeueHaasDisplayBoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'NeueHaasDisplay';
+    src: url('/assets/fonts/NeueHaas/NeueHaasDisplayBlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'NeueHaasDisplay';
+    src: url('/assets/fonts/NeueHaas/NeueHaasDisplayXXThin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeueHaasDisplay';
+    src: url('/assets/fonts/NeueHaas/NeueHaasDisplayXThin.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeueHaasDisplay';
+    src: url('/assets/fonts/NeueHaas/NeueHaasDisplayThin.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeueHaasDisplay';
+    src: url('/assets/fonts/NeueHaas/NeueHaasDisplayRoman.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeueHaasDisplay';
+    src: url('/assets/fonts/NeueHaas/NeueHaasDisplayMedium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeueHaasDisplay';
+    src: url('/assets/fonts/NeueHaas/NeueHaasDisplayLight.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeueHaasDisplay';
+    src: url('/assets/fonts/NeueHaas/NeueHaasDisplayBold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeueHaasDisplay';
+    src: url('/assets/fonts/NeueHaas/NeueHaasDisplayBlack.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CircularStd';
+    src: url('/assets/fonts/Circular/CircularStd-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CircularStd';
+    src: url('/assets/fonts/Circular/CircularStd-LightItalic.otf') format('opentype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'CircularStd';
+    src: url('/assets/fonts/Circular/CircularStd-Book.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CircularStd';
+    src: url('/assets/fonts/Circular/CircularStd-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CircularStd';
+    src: url('/assets/fonts/Circular/CircularStd-MediumItalic.otf') format('opentype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'CircularStd';
+    src: url('/assets/fonts/Circular/CircularStd-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CircularStd';
+    src: url('/assets/fonts/Circular/CircularStd-BoldItalic.otf') format('opentype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'CircularStd';
+    src: url('/assets/fonts/Circular/CircularStd-Black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CircularStd';
+    src: url('/assets/fonts/Circular/CircularStd-BlackItalic.otf') format('opentype');
+    font-weight: 900;
+    font-style: italic;
 }

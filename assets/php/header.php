@@ -8,4 +8,5 @@
 <link rel="stylesheet" href="/assets/css/min/inputs.min.css">
 <link rel="stylesheet" href="/assets/css/min/scroll.min.css">
 <link rel="stylesheet" href="/assets/libraries/fontawesome/css/all.min.css">
+<link rel="stylesheet" href="/assets/css/min/responsive.min.css">
 <script src="/assets/libraries/jquery.js"></script>
